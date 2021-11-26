@@ -1,4 +1,4 @@
-// varibales to move data around
+// variables to move data around
 // variable is an empty box that have a label (course) assigned a value (shecodes)
 let course = "SheCodes";
 // to access the entry in course
@@ -8,6 +8,8 @@ console.log(course); //SheCodes is returned
 
 let version = 10;
 // numbers dont need quotes
+
+// variables cannot contain a space in them - rather follow a camel case / - syntax! 
 
 let tool = "VS Code";
 

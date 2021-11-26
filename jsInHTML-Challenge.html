@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS in HTML Challenge</title>
+  <style>
+    body {
+      font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+    }
+    section {
+      margin: 120px 0;
+    }
+    h1,
+    h2 {
+      font-weight: 900;
+      font-size: 34px;
+      line-height: 48px;
+      margin: 0;
+    }
+    h1 {
+      color: #272044;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      color: #885df1;
+      padding: 0 0 24px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      font-family: PT Mono, monospace;
+      text-align: center;
+    }
+    button {
+      border-radius: 25px;
+      margin: 0 auto;
+      display: block;
+      background-color: #fff;
+      border: 1px solid #885df1;
+      color: #885df1;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 16px 24px;
+      text-decoration: none;
+      transition: all 200ms ease;
+    }
+    button:hover {
+      color: #fff;
+      background: #885df1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Using the starter kit : https://gist.github.com/matthieua/60b98727638b4274bfd3cee1400b90a1, Create a prompt asking for your hometown and alert the hometown
+Ask for your first name and last name. Alert your full name -->
+
+<section>
+  <h1>
+    👩‍💻 She Codes is a Coding Workshop for Women
+  </h1>
+  <h2>
+    Access a new career in Technology
+  </h2>
+  <p>
+    She Codes teaches coding, design and management skills to women
+    <br />
+    <strong>
+      Limited amount of spots!
+    </strong>
+  </p>
+  <br />
+  <button>
+    Apply Now
+  </button>
+</section>
+
+<script>
+  let hometown = prompt("Where's your hometown?");
+  let fname = prompt("Whats your first name?");
+  let lname = prompt("What's your last name?");
+  alert (`${fname} ${lname} , your hometown is ${hometown}!`);
+</script>
+
+
+</body>
+</html>
+
+
+<!-- Prof Solution: https://paper.dropbox.com/doc/Challenge-3-Variables--AgUtP8p2QFHPd70g_RD7rKvwAg-qltYYnY08mzVc32bLRoqP#:uid=036615094708682091130514&h2=%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB-Suggested-solution-? -->
