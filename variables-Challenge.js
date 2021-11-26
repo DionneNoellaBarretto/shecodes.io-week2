@@ -8,3 +8,7 @@ console.log("I am from " + cityState + ", in "+ country);
 
 // Professor Solution
 
+// let city ="something";
+// let country = "somethingelse"
+
+// "I am from " + city + ", in " + country;
