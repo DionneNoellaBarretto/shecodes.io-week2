@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- https://gist.github.com/matthieua/60b98727638b4274bfd3cee1400b90a1 
+  
+  Ask for "What country are you from?" in a prompt
+Alert ‘You speak Portuguese’ if you are from Brazil or Portugal
+Alert ‘You don't speak Portuguese’ otherwise
+Bonus point: make it work with brazil, BRAZIL, PORTUGAL, pORTugal etc -->
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js Logical Operators</title>
+  </head>
+  <body>
+    <script>
+      let country = prompt("What country are you from?");
+      // Bonus point: make it work with brazil, BRAZIL, PORTUGAL, pORTugal etc
+      country = country.toLowerCase();
+      country = country.trim();
+      country = country.replace("brasil", "brazil");
+      if (country === "brazil" || country === "portugal") {
+        alert("Hola! Seems like you speak Portuguese! ");
+      } else {
+        alert("Hello! You don't seem to speak Portuguese!");
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Prof Soluntion: https://paper.dropbox.com/doc/Challenge-JS-Logical-Operators--AgV5zu1rZ1fB3y13WranBPQRAg-tdZWadUh6BDOikgCMUxSQ#:uid=214907077237055241777420&h2=%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB-Suggested-solution 
+
+
+
+let country = prompt("What country are you from?");
+
+country = country.toLowerCase().trim();
+
+if (country === "brazil" || country === "portugal") {
+  alert("You speak Portuguese");
+} else {
+  alert("Learn Portuguese!");
+}-->
