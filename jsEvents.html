@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- https://www.shecodes.io/learn/workshops/491/units/2/lessons/63#pills-docs -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes</title>
+    <style>
+      .free {
+        color: green;
+      }
+
+      .advanced {
+        color: purple;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      ul {
+        text-align: center;
+        padding: 0;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>SheCodes</h1>
+    <!-- https://www.shecodes.io/learn/workshops/491/units/2/lessons/88#pills-docs -->
+    <ul>
+      <li class="advanced">SheCodes+</li>
+      <li class="free">SheCodes Express</li>
+      <li class="free">SheCodes Story</li>
+    </ul>
+
+    <button>Contact Me</button>
+
+    <script>
+      function contactMe() {
+        let name = prompt("What's your name?");
+        let email = prompt("What's your email address?");
+        let h1 = document.querySelector("h1");
+        h1.innerHTML =
+          "<strong>Thank you </strong> " +
+          name +
+          "<em>  we will reach out to you at -</em> " +
+          email +
+          " within 48hours! In the mean time please review these options..";
+      }
+      let Button = document.querySelector("button");
+      Button.addEventListener("click", contactMe);
+    </script>
+  </body>
+</html>
+
+<!-- Event types
+mouseenter mouseover mousemove mouseleave mousedown mouseup click dblclick mouseout -->
