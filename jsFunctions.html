@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Js Functions</title>
-  </head>
 
-  <body>
-    <script>
-      // functions Piece of code that does one or more actions!
-      // https://www.shecodes.io/learn/workshops/491/units/2/lessons/12#pills-docs
-      // function names are usually a verb
-      function userGreeting() {
-        let lang = prompt("What language do you speak?");
-        if (lang === "French") {
-          lang = lang.toLowerCase();
-          lang = lang.trim();
-          alert("Bonjour!");
-        } else {
-          // if (lang === "English") {
-          alert("Hello!");
-          // }
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Js Functions</title>
+</head>
+
+<body>
+  <script>
+    // functions Piece of code that does one or more actions!
+    // https://www.shecodes.io/learn/workshops/491/units/2/lessons/12#pills-docs
+    // function names are usually a verb
+    function userGreeting() {
+      let lang = prompt("What language do you speak?");
+      if (lang === "French") {
+        lang = lang.toLowerCase();
+        lang = lang.trim();
+        alert("Bonjour!");
+      } else {
+        // if (lang === "English") {
+        alert("Hello!");
+        // }
       }
+    }
 
-      // call the function 4 times!
-      userGreeting();
-      userGreeting();
-      userGreeting();
-      userGreeting();
-    </script>
-  </body>
+
+    // call the function 4 times!
+    userGreeting();
+    userGreeting();
+    userGreeting();
+    userGreeting();
+  </script>
+</body>
+
 </html>

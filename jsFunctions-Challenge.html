@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Functions-Challenge</title>
+  </head>
+
+<!-- Create a function canSpeakPortuguese
+From inside the function, ask for the user's country
+Alert ‘You speak Portuguese’ if from Brazil or Portugal
+Alert ‘Go learn Portuguese!’ otherwise
+Call the function -->
+  <body>
+    <script>
+      function canSpeakPortuguese() {
+        let country = prompt("What country are you from?");
+        // Bonus point: make it work with brazil, BRAZIL, PORTUGAL, pORTugal etc
+        country = country.toLowerCase();
+        country = country.trim();
+        country = country.replace("brasil", "brazil");
+        if (country === "brazil" || country === "portugal") {
+          alert("Hola! Seems like you speak Portuguese! ");
+        } else {
+          alert("Hello! You don't seem to speak Portuguese!");
+        }
+      }
+
+      canSpeakPortuguese();
+      canSpeakPortuguese();
+
+
+    </script>
+
+
+  </body>
+</html>
+<!-- Prof Solution: https://paper.dropbox.com/doc/Challenge-2-JS-Functions--Am7KlOmWhU42TMfo40jts~VlAQ-QsYBtvQeLnIIQB4YNa77J -->
+
+
+function askForCountry() {
+  let country = prompt("What's your country?")
+    .toLowerCase()
+    .trim();
+
+  if (country === "brazil" || country === "portugal") {
+    alert("You speak Portuguese! Boa pá!");
+  } else {
+    alert("You speak another language");
+  }
+}
+
+askForCountry();
