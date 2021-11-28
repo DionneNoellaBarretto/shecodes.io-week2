@@ -1,4 +1,4 @@
-# [SheCodes.io-Week1 - Takeaway](https://dionnenoellabarretto.github.io/shecodes.io-week12/)
+# [SheCodes.io-Week1 - Takeaway](https://dionnenoellabarretto.github.io/shecodes.io-week2/)
 
 ## HW2
 
