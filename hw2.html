@@ -73,6 +73,160 @@
         color: #1a64d6;
         border: 1px solid #1a64d6;
       }
+
+      .footer {
+        font-size: 18px;
+        font-family: monospace;
+        padding: 15px;
+        text-align: center;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      🌤
+      <br />
+      Currently 21° in Tokyo
+    </h1>
+    <h2 class="cel">13° / <strong class="far">23°</strong></h2>
+    <ul>
+      <li>
+        <h3>🌧Tomorrow</h3>
+        <p class="ctempTom">10° / <strong class="ftempTom">22°</strong></p>
+      </li>
+      <li>
+        <h3>🌥 Saturday</h3>
+        <p class="ctemSat">15° / <strong class="ftempSat">17°</strong></p>
+      </li>
+      <li>
+        <h3>☀️ Sunday</h3>
+        <p class="ctempSun">25° / <strong class="ftempSun">28°</strong></p>
+      </li>
+    </ul>
+
+    <button>Change city</button>
+    <div class="footer">
+      Coded by
+      <span><a href="https://dionnenoellabarretto.github.io/">DNB</a></span>
+    </div>
+
+    <script>
+      function weather() {
+        let h1 = document.querySelector("h1");
+        let city = prompt("What is your location?");
+        // camel case city name
+        city = city.charAt(0).toUpperCase() + city.substr(1).toLowerCase();
+        let fTemp = prompt("What is the temperature in °F?");
+
+        // https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-11.php , rounding off (https://www.delftstack.com/howto/javascript/javascript-round-to-2-decimal-places/) to the nearest 2 digits
+        let cTemp = (((fTemp - 32) * 5) / 9).toFixed(2);
+
+        // is user cancels or empty( https://stackoverflow.com/questions/20533127/detect-empty-value-on-prompt)
+        // if 0°C or 32°F
+        if ((cTemp >= 0 && cTemp <= 100) || (fTemp > 32 && fTemp <= 212)) {
+          h1.innerHTML = `🌞 <br /> It's currently ${fTemp}<em>°F</em> / ${cTemp}<em>°C</em> in ${city}`
+        } else if (cTemp < 0 || fTemp <= 32) {
+          h1.innerHTML = `🥶 <br/> It's currently ${fTemp}<em>°F</em>  / ${cTemp}<em>°C</em> in ${city}`
+        }
+// empty//null check logic
+        //   if (
+        //     city == null ||
+        //     city === "" ||
+        //     fTemp == null ||
+        //     fTemp === "" ||
+        //     isNaN(fTemp) ||
+        //     isNaN(city)
+        //   ) {
+        //     h1.innerHTML = `You must enter a city and its temperature in <em>°F</em>! Please refresh the browser and try again!`
+        //  }
+        // else {
+        //   document.innerHTML = `You must enter a city and its temperature in <em>°F</em>! Please refresh the browser and try again!`
+        // }
+      }
+
+      let Button = document.querySelector("button");
+      Button.addEventListener("click", weather);
+    </script>
+  </body>
+</html>
+
+<!-- Prof Solution: https://gist.github.com/matthieua/c67de99135528487ed789bdfc9c58114 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <style>
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      h1 {
+        color: #1a64d6;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0;
+
+        font-size: 34px;
+        line-height: 48px;
+        font-weight: 400;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      li:hover {
+        background: #fffbef;
+      }
+
+      p {
+        font-size: 18px;
+        opacity: 0.7;
+        text-align: center;
+        font-family: monospace;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: white;
+        color: #1a64d6;
+        border: 1px solid #1a64d6;
+      }
     </style>
   </head>
   <body>
@@ -109,5 +263,21 @@
     <p>
       Coded by Matt Delac
     </p>
-  </body>
-</html>
+    <script>
+      function changeCity() {
+        let city = prompt("What city do you live in?");
+        let temperature = prompt("What temperature is it?");
+        let heading = document.querySelector("h1");
+        if (temperature < 0) {
+          heading.innerHTML =
+            "☹️<br />Currently " + temperature + "°C in " + city;
+        } else {
+          heading.innerHTML =
+            "😄<br />Currently " + temperature + "°C in " + city;
+        }
+      }
+
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", changeCity);
+    </script>
+  </body> -->
